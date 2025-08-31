@@ -215,3 +215,12 @@ A curated list of databases, database engines, tools, and resources for learning
 ## Contribute
 
 Feel free to contribute by submitting a pull request or opening an issue to suggest improvements or additional tools.
+
+## License
+
+[![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+
+This repository is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+
+[Topic: Malware Dataset](https://github.com/topics/database)
