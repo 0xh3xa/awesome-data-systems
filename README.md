@@ -1,7 +1,7 @@
-# Awesome Databases
+# Awesome Data Systems
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A curated list of databases, database engines, tools, and resources for learning, exploring, and building with data.  
+A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakehouses, pipelines, ETL, message queues, and analytics tools.
 
 ## Table of Contents
 - [Relational Databases (SQL)](#relational-databases-sql)
@@ -31,6 +31,7 @@ A curated list of databases, database engines, tools, and resources for learning
   - [PHP](#php)
   - [Go](#go)
   - [.NET](#net--c)
+- [Message Queues & Streaming Platforms](#message-queues--streaming-platforms)
 - [Data Pipelines & ETL Tools](#data-pipelines--etl-tools)
 - [Resources](#resources)
 - [Contribute](#contribute)
@@ -190,6 +191,19 @@ A curated list of databases, database engines, tools, and resources for learning
 - [KeyDB](https://docs.keydb.dev/) - Multithreaded fork of Redis for better scalability.
 - [DragonflyDB](https://www.dragonflydb.io/) - Modern in-memory data store, drop-in replacement for Redis/Memcached.
 - [Memcached](https://memcached.org/) - High-performance, distributed memory object caching system.
+
+## Message Queues & Streaming Platforms
+- [Apache Kafka](https://kafka.apache.org/) — Distributed streaming platform for high-throughput event processing.
+- [RabbitMQ](https://www.rabbitmq.com/) — Lightweight, widely used open-source message broker.
+- [ActiveMQ](https://activemq.apache.org/) — Open-source multi-protocol messaging server.
+- [Pulsar](https://pulsar.apache.org/) — Cloud-native, distributed messaging and streaming platform.
+- [NATS](https://nats.io/) — High-performance messaging system for cloud-native apps, IoT, and microservices.
+- [ZeroMQ](https://zeromq.org/) — High-performance asynchronous messaging library.
+- [Redpanda](https://redpanda.com/) — Kafka-compatible streaming platform written in C++.
+- [Celery](https://docs.celeryq.dev/) — Distributed task queue for Python, often used with brokers like RabbitMQ/Redis.
+- [Amazon SQS](https://aws.amazon.com/sqs/) — Fully managed message queuing service by AWS.
+- [Google Pub/Sub](https://cloud.google.com/pubsub) — Global real-time messaging service by Google Cloud.
+- [Azure Service Bus](https://azure.microsoft.com/en-us/products/service-bus/) — Fully managed enterprise message broker by Microsoft Azure.
 
 ## Data Pipelines & ETL Tools
 
