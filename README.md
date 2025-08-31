@@ -11,6 +11,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Graph Databases](#graph-databases)
 - [Columnar Databases](#columnar-databases)
 - [Time-Series Databases](#time-series-databases)
+- [Vector Databases](#vector-databases)
 - [Search Engines / Specialized](#search-engines--specialized)
 - [Streaming Databases](#streaming-databases)
 - [Data Warehouses & Lakehouses](#data-warehouses--lakehouses)
@@ -26,6 +27,8 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
   - [Monitoring & Performance](#monitoring--performance)
   - [Data Visualization & BI](#data-visualization--bi)
   - [Caching & In-Memory Databases](#caching--in-memory-databases)
+  - [Data Governance & Catalogs](#data-governance--catalogs)
+  - [Data Quality & Observability](#data-quality--observability)
 - [ORMs & Query Builders by Language](#orms--query-builders-by-language)
   - [Java](#java)
   - [Python](#python)
@@ -36,6 +39,9 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
   - [.NET](#net--c)
 - [Message Queues & Streaming Platforms](#message-queues--streaming-platforms)
 - [Data Pipelines & ETL Tools](#data-pipelines--etl-tools)
+- [Workflow Orchestration](#workflow-orchestration)
+- [Data Sharing & Federation](#data-sharing--federation)
+- [ML Feature Stores](#ml-feature-stores)
 - [Resources](#resources)
 - [Contribute](#contribute)
 - [License](#license)
@@ -79,6 +85,13 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Prometheus](https://prometheus.io/) - Monitoring system with time-series database.
 - [QuestDB](https://questdb.io/) - High-performance time-series database.
 - [TimescaleDB](https://www.timescale.com/) - PostgreSQL extension for time-series data.
+
+## Vector Databases
+- [Milvus](https://milvus.io/) - Cloud-native, open-source vector database.
+- [Weaviate](https://weaviate.io/) - Open-source vector database with hybrid search.
+- [Qdrant](https://qdrant.tech/) - High-performance vector search engine.
+- [Pinecone](https://www.pinecone.io/) - Managed vector database for similarity search.
+- [Vespa](https://vespa.ai/) - Big data serving engine with vector and keyword search.
 
 ## Search Engines / Specialized
 - [Elasticsearch](https://www.elastic.co/elasticsearch/) - Distributed search and analytics engine.
@@ -164,6 +177,17 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Memcached](https://memcached.org/) - High-performance, distributed memory object caching system.
 - [Valkey](https://valkey.io/) - High-performance, open-source Redis fork.
 
+### Data Governance & Catalogs
+- [Amundsen](https://www.amundsen.io/) - Open-source data discovery and metadata engine by Lyft.
+- [DataHub](https://datahubproject.io/) - Modern data catalog and metadata platform.
+- [OpenMetadata](https://open-metadata.org/) - Centralized metadata management platform.
+- [Apache Atlas](https://atlas.apache.org/) - Governance and metadata framework for Hadoop ecosystems.
+
+### Data Quality & Observability
+- [Great Expectations](https://greatexpectations.io/) - Data validation and testing framework.
+- [Monte Carlo](https://www.montecarlodata.com/) - Data observability platform.
+- [Soda](https://soda.io/) - Data quality monitoring and validation.
+  
 
 ## ORMs & Query Builders by Language
 
@@ -217,7 +241,6 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Redpanda](https://redpanda.com/) - Kafka-compatible streaming platform written in C++.
 - [ZeroMQ](https://zeromq.org/) - High-performance asynchronous messaging library.
 
----
 
 ## Data Pipelines & ETL Tools
 - [Apache Airflow](https://airflow.apache.org/) - Platform to programmatically author, schedule, and monitor workflows.
@@ -233,10 +256,31 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Talend](https://www.talend.com/) - Commercial & open-source data integration platform.
 
 
+
+## Workflow Orchestration
+- [Prefect](https://www.prefect.io/) - Dataflow orchestration for modern pipelines.
+- [Dagster](https://dagster.io/) - Orchestration platform for ML, analytics, and ETL.
+- [Azkaban](https://azkaban.github.io/) - Batch workflow job scheduler by LinkedIn.
+- [Oozie](https://oozie.apache.org/) - Workflow scheduler for Hadoop jobs.
+
+## Data Sharing & Federation
+- [Trino (PrestoSQL)](https://trino.io/) - SQL query engine for distributed data sources.
+- [PrestoDB](https://prestodb.io/) - Distributed SQL engine for large-scale data analytics.
+- [Dremio](https://www.dremio.com/) - Data lake query engine and lakehouse platform.
+
+## ML Feature Stores
+- [Feast](https://feast.dev/) - Open-source feature store.
+- [Tecton](https://www.tecton.ai/) - Enterprise-grade feature platform.
+- [Hopsworks](https://www.hopsworks.ai/) - Feature store with online/offline support.
+
+
 ## Resources
 - [Awesome Database Learning](https://github.com/pingcap/awesome-database-learning) - Curated list for database learning resources.
 - [Database Internals (Book)](https://www.databass.dev/) - A deep dive into how databases work.
 - [Use The Index, Luke](https://use-the-index-luke.com/) - Guide to database performance for developers.
+- [Database of Databases](https://dbdb.io/) - An extensive catalog of databases.
+- [Awesome Big Data](https://github.com/0xnr/awesome-bigdata) - Curated list of big data frameworks.
+- [CMU Database Group Lectures](https://www.youtube.com/c/cmudatabasegroup) - Deep dive into database systems.
 
 
 ## Contribute
