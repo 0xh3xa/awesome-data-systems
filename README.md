@@ -3,19 +3,19 @@
 
 A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakehouses, pipelines, ETL, message queues, and analytics tools.
 
-
 ## Table of Contents
 - [Relational Databases (SQL)](#relational-databases-sql)
-- [Key-Value Stores](#key-value-stores)
+- [Key-Value Stores (NoSQL)](#key-value-stores-nosql)
 - [Document Databases (NoSQL)](#document-databases-nosql)
-- [Graph Databases](#graph-databases)
-- [Columnar Databases](#columnar-databases)
-- [Time-Series Databases](#time-series-databases)
-- [Vector Databases](#vector-databases)
-- [Search Engines / Specialized](#search-engines--specialized)
-- [Streaming Databases](#streaming-databases)
-- [Data Warehouses & Lakehouses](#data-warehouses--lakehouses)
-- [Cloud Databases (Managed Services)](#cloud-databases-managed-services)
+- [Graph Databases (NoSQL)](#graph-databases-nosql)
+- [Wide-Column Stores (NoSQL)](#wide-column-stores-nosql)
+- [Analytical Columnar Databases (SQL)](#analytical-columnar-databases-sql)
+- [Time-Series Databases (Mixed)](#time-series-databases-mixed)
+- [Vector Databases (NoSQL)](#vector-databases-nosql)
+- [Search Engines / Specialized (NoSQL)](#search-engines--specialized-nosql)
+- [Streaming Databases (SQL)](#streaming-databases-sql)
+- [Data Warehouses & Lakehouses (SQL)](#data-warehouses--lakehouses-sql)
+- [Cloud Databases (Managed Services · Mixed)](#cloud-databases-managed-services--mixed)
   - [Amazon Web Services (AWS)](#amazon-web-services-aws)
   - [Google Cloud Platform (GCP)](#google-cloud-platform-gcp)
   - [Microsoft Azure](#microsoft-azure)
@@ -29,7 +29,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
   - [Caching & In-Memory Databases](#caching--in-memory-databases)
   - [Data Governance & Catalogs](#data-governance--catalogs)
   - [Data Quality & Observability](#data-quality--observability)
-- [ORMs & Query Builders by Language](#orms--query-builders-by-language)
+- [ORMs & Query Builders by Language (SQL)](#orms--query-builders-by-language-sql)
   - [Java](#java)
   - [Python](#python)
   - [Nodejs / TypeScript](#nodejs--typescript)
@@ -40,22 +40,26 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Message Queues & Streaming Platforms](#message-queues--streaming-platforms)
 - [Data Pipelines & ETL Tools](#data-pipelines--etl-tools)
 - [Workflow Orchestration](#workflow-orchestration)
-- [Data Sharing & Federation](#data-sharing--federation)
+- [Storage Engines](#storage-engines)
+- [Data Sharing & Federation (SQL Engines)](#data-sharing--federation-sql-engines)
 - [ML Feature Stores](#ml-feature-stores)
 - [Resources](#resources)
 - [Contribute](#contribute)
 - [License](#license)
 
-
 ## Relational Databases (SQL)
+> Traditional row-based databases with strong ACID guarantees and structured schemas.
+
+- [MySQL](https://www.mysql.com/) - Popular open-source relational database.
 - [MariaDB](https://mariadb.org/) - Community-driven fork of MySQL.
 - [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server) - Relational DB for enterprise use.
-- [MySQL](https://www.mysql.com/) - Popular open-source relational database.
 - [Oracle Database](https://www.oracle.com/database/) - Enterprise-grade relational database.
 - [PostgreSQL](https://www.postgresql.org/) - Advanced open-source relational database.
 - [SQLite](https://www.sqlite.org/) - Embedded relational database, serverless.
 
-## Key-Value Stores
+## Key-Value Stores (NoSQL)
+> Databases optimized for simple key-based access, often in-memory and highly scalable.
+
 - [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) - Fully managed key-value and document database by AWS.
 - [etcd](https://etcd.io/) - Distributed key-value store for configuration and service discovery.
 - [Redis](https://redis.io/) - In-memory data structure store, used as a database, cache, and message broker.
@@ -63,83 +67,103 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Valkey](https://valkey.io/) - Open-source Redis fork, maintained by the Linux Foundation.
 
 ## Document Databases (NoSQL)
+> Databases that store semi-structured data as JSON-like documents with flexible schemas.
+
 - [ArangoDB](https://arangodb.com/) - Multi-model database (document, graph, key-value).
 - [CouchDB](https://couchdb.apache.org/) - Database that uses JSON for documents, HTTP for APIs, and JavaScript for queries.
 - [MongoDB](https://www.mongodb.com/) - General-purpose document database.
 - [RavenDB](https://ravendb.net/) - Document database with ACID guarantees.
 
-## Graph Databases
+## Graph Databases (NoSQL)
+> Databases designed for highly connected data, optimized for traversals and relationships.
+
 - [JanusGraph](https://janusgraph.org/) - Scalable graph database optimized for large-scale storage.
 - [Neo4j](https://neo4j.com/) - Leading graph database.
 - [OrientDB](https://orientdb.org/) - Multi-model database supporting graph, document, object, and key/value models.
 - [TigerGraph](https://www.tigergraph.com/) - Enterprise-level scalable graph database.
 
-## Columnar Databases
+## Wide-Column Stores (NoSQL)
+> Column-family databases optimized for high write throughput and large-scale distributed storage.
+
 - [Apache Cassandra](https://cassandra.apache.org/) - Distributed wide-column store, highly scalable.
-- [Apache Kudu](https://kudu.apache.org/) - Fast analytics on fast data with Hadoop ecosystem.
-- [ClickHouse](https://clickhouse.com/) - Column-oriented DBMS for online analytical processing.
 - [HBase](https://hbase.apache.org/) - Hadoop database for large-scale columnar storage.
 
-## Time-Series Databases
-- [InfluxDB](https://www.influxdata.com/) - Time-series platform for metrics & events.
-- [Prometheus](https://prometheus.io/) - Monitoring system with time-series database.
-- [QuestDB](https://questdb.io/) - High-performance time-series database.
-- [TimescaleDB](https://www.timescale.com/) - PostgreSQL extension for time-series data.
+## Analytical Columnar Databases (SQL)
+> Databases that store data by columns, optimized for analytical queries and OLAP workloads.
 
-## Vector Databases
+- [Apache Kudu](https://kudu.apache.org/) - Fast analytics storage; typically queried via SQL engines (e.g., Impala/Trino).
+- [ClickHouse](https://clickhouse.com/) - Column-oriented DBMS for online analytical processing (SQL).
+
+## Time-Series Databases (Mixed)
+> Databases optimized for time-stamped data, metrics, and events. Can be SQL or NoSQL.
+
+- [InfluxDB](https://www.influxdata.com/) - Time-series platform for metrics & events. **[NoSQL]**
+- [Prometheus](https://prometheus.io/) - Monitoring system with time-series database. **[NoSQL]**
+- [QuestDB](https://questdb.io/) - High-performance time-series database. **[SQL]**
+- [TimescaleDB](https://www.timescale.com/) - PostgreSQL extension for time-series data. **[SQL]**
+
+## Vector Databases (NoSQL)
+> Databases specialized for storing and querying high-dimensional vectors for AI/ML use cases.
+
 - [Milvus](https://milvus.io/) - Cloud-native, open-source vector database.
 - [Weaviate](https://weaviate.io/) - Open-source vector database with hybrid search.
 - [Qdrant](https://qdrant.tech/) - High-performance vector search engine.
 - [Pinecone](https://www.pinecone.io/) - Managed vector database for similarity search.
 - [Vespa](https://vespa.ai/) - Big data serving engine with vector and keyword search.
 
-## Search Engines / Specialized
+## Search Engines / Specialized (NoSQL)
+> Engines optimized for full-text search, relevance scoring, and specialized query types.
+
 - [Elasticsearch](https://www.elastic.co/elasticsearch/) - Distributed search and analytics engine.
 - [MeiliSearch](https://www.meilisearch.com/) - Fast, relevant, and typo-tolerant search engine.
 - [Solr](https://solr.apache.org/) - Open-source enterprise search platform.
 - [Typesense](https://typesense.org/) - Open-source, typo-tolerant search engine.
 
-## Streaming Databases
-- [ksqlDB](https://ksqldb.io/) - Event streaming database built on Kafka.
+## Streaming Databases (SQL)
+> Databases that support continuous queries and real-time processing on data streams.
+
+- [ksqlDB](https://ksqldb.io/) - Event streaming database built on Kafka (SQL on streams).
 - [Materialize](https://materialize.com/) - Streaming SQL database for real-time applications.
 
-## Data Warehouses & Lakehouses
+## Data Warehouses & Lakehouses (SQL)
+> Centralized systems for large-scale analytics, combining storage and compute for BI/ML.
+
 - [Apache Iceberg](https://iceberg.apache.org/) - High-performance table format for huge analytic datasets.
 - [Databricks Lakehouse](https://www.databricks.com/) - Unified platform for data warehousing and AI.
 - [Delta Lake](https://delta.io/) - Storage layer for reliability and ACID transactions in lakehouses.
 - [Snowflake](https://www.snowflake.com/) - Cloud data warehouse with separation of compute and storage.
 
-
-## Cloud Databases (Managed Services)
+## Cloud Databases (Managed Services · Mixed)
+> Fully managed SQL and NoSQL databases offered by major cloud providers.
 
 ### Amazon Web Services (AWS)
-- [Amazon Aurora](https://aws.amazon.com/rds/aurora/) - MySQL- and PostgreSQL-compatible relational database built for the cloud.
-- [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) - Managed key-value & document NoSQL database.
-- [Amazon Neptune](https://aws.amazon.com/neptune/) - Managed graph database service.
-- [Amazon RDS](https://aws.amazon.com/rds/) - Managed relational databases (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server).
-- [Amazon Redshift](https://aws.amazon.com/redshift/) - Managed data warehouse.
+- [Amazon Aurora](https://aws.amazon.com/rds/aurora/) - **SQL** (MySQL- & PostgreSQL-compatible).
+- [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) - **NoSQL** key-value & document.
+- [Amazon Neptune](https://aws.amazon.com/neptune/) - **NoSQL** graph.
+- [Amazon RDS](https://aws.amazon.com/rds/) - **SQL** (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server).
+- [Amazon Redshift](https://aws.amazon.com/redshift/) - **SQL** data warehouse.
 
 ### Google Cloud Platform (GCP)
-- [BigQuery](https://cloud.google.com/bigquery) - Fully managed data warehouse.
-- [Bigtable](https://cloud.google.com/bigtable) - Scalable wide-column store for time-series & IoT.
-- [Cloud Spanner](https://cloud.google.com/spanner) - Globally distributed relational database.
-- [Cloud SQL](https://cloud.google.com/sql) - Managed MySQL, PostgreSQL, and SQL Server.
-- [Firestore](https://cloud.google.com/firestore) - NoSQL document database.
+- [BigQuery](https://cloud.google.com/bigquery) - **SQL** data warehouse.
+- [Bigtable](https://cloud.google.com/bigtable) - **NoSQL** wide-column store.
+- [Cloud Spanner](https://cloud.google.com/spanner) - **SQL** globally distributed relational DB.
+- [Cloud SQL](https://cloud.google.com/sql) - **SQL** (MySQL, PostgreSQL, SQL Server).
+- [Firestore](https://cloud.google.com/firestore) - **NoSQL** document.
 
 ### Microsoft Azure
-- [Azure Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db/) - Multi-model distributed NoSQL database.
-- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/) - Managed MySQL.
-- [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/products/postgresql/) - Managed PostgreSQL.
-- [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database) - Managed relational database.
+- [Azure Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db/) - **NoSQL** multi-model.
+- [Azure Database for MySQL](https://azure.microsoft.com/en-us/products/mysql/) - **SQL**.
+- [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/products/postgresql/) - **SQL**.
+- [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database) - **SQL**.
 
 ### Other Managed Providers
-- [CockroachDB Cloud](https://www.cockroachlabs.com/product/cockroachdb-cloud/) - Distributed SQL database.
-- [MongoDB Atlas](https://www.mongodb.com/atlas) - Managed MongoDB in the cloud.
-- [PlanetScale](https://planetscale.com/) - Serverless MySQL database built on Vitess.
-- [Supabase](https://supabase.com/) - Open-source Firebase alternative with PostgreSQL.
-
+- [CockroachDB Cloud](https://www.cockroachlabs.com/product/cockroachdb-cloud/) - **SQL** distributed.
+- [MongoDB Atlas](https://www.mongodb.com/atlas) - **NoSQL** document.
+- [PlanetScale](https://planetscale.com/) - **SQL** (MySQL/Vitess).
+- [Supabase](https://supabase.com/) - **SQL** (PostgreSQL).
 
 ## Tools & Utilities
+> Ecosystem tools for database development, administration, visualization, and operations.
 
 ### GUI Clients
 - [Beekeeper Studio](https://www.beekeeperstudio.io/) - Cross-platform SQL editor and database manager.
@@ -187,9 +211,9 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Great Expectations](https://greatexpectations.io/) - Data validation and testing framework.
 - [Monte Carlo](https://www.montecarlodata.com/) - Data observability platform.
 - [Soda](https://soda.io/) - Data quality monitoring and validation.
-  
 
-## ORMs & Query Builders by Language
+## ORMs & Query Builders by Language (SQL)
+> Libraries that simplify database access and queries by abstracting SQL in various languages.
 
 ### Java
 - [Ebean ORM](https://ebean.io/) - Lightweight ORM for Java/Kotlin.
@@ -227,8 +251,9 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) - Official Microsoft ORM for .NET.
 - [NHibernate](https://nhibernate.info/) - Mature ORM for .NET.
 
-
 ## Message Queues & Streaming Platforms
+> Systems for reliable message delivery and event-driven streaming architectures.
+
 - [ActiveMQ](https://activemq.apache.org/) - Open-source multi-protocol messaging server.
 - [Amazon SQS](https://aws.amazon.com/sqs/) - Fully managed message queuing service by AWS.
 - [Apache Kafka](https://kafka.apache.org/) - Distributed streaming platform for high-throughput event processing.
@@ -241,8 +266,9 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Redpanda](https://redpanda.com/) - Kafka-compatible streaming platform written in C++.
 - [ZeroMQ](https://zeromq.org/) - High-performance asynchronous messaging library.
 
-
 ## Data Pipelines & ETL Tools
+> Frameworks and services for extracting, transforming, and loading data across systems.
+
 - [Apache Airflow](https://airflow.apache.org/) - Platform to programmatically author, schedule, and monitor workflows.
 - [Apache NiFi](https://nifi.apache.org/) - Dataflow automation tool for data ingestion and ETL.
 - [AWS Glue](https://aws.amazon.com/glue/) - Serverless ETL service by AWS.
@@ -255,24 +281,37 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Singer](https://www.singer.io/) - Standard for writing scripts that move data between databases, web APIs, files, etc.
 - [Talend](https://www.talend.com/) - Commercial & open-source data integration platform.
 
-
-
 ## Workflow Orchestration
+> Schedulers and orchestrators for managing data workflows and complex pipelines.
+
 - [Prefect](https://www.prefect.io/) - Dataflow orchestration for modern pipelines.
 - [Dagster](https://dagster.io/) - Orchestration platform for ML, analytics, and ETL.
 - [Azkaban](https://azkaban.github.io/) - Batch workflow job scheduler by LinkedIn.
 - [Oozie](https://oozie.apache.org/) - Workflow scheduler for Hadoop jobs.
 
-## Data Sharing & Federation
+## Storage Engines
+> Low-level engines handling how data is stored, indexed, and retrieved inside databases.
+
+- [InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html) — Default storage engine for MySQL, ACID-compliant, MVCC.
+- [MyISAM](https://dev.mysql.com/doc/refman/8.0/en/myisam-storage-engine.html) — Legacy MySQL engine, fast reads, no transactions.
+- [Aria](https://mariadb.com/kb/en/aria/) — MariaDB storage engine, crash-safe alternative to MyISAM.
+- [ColumnStore](https://mariadb.com/kb/en/mariadb-columnstore/) — MariaDB’s columnar storage engine for analytics.
+- [WiredTiger](https://www.mongodb.com/docs/manual/core/wiredtiger/) — Default MongoDB storage engine.
+- [RocksDB](https://rocksdb.org/) — High-performance embedded key-value storage engine (used in many NoSQL/OLTP systems).
+
+## Data Sharing & Federation (SQL Engines)
+> Engines that provide SQL queries across distributed, external, or federated data sources.
+
 - [Trino (PrestoSQL)](https://trino.io/) - SQL query engine for distributed data sources.
 - [PrestoDB](https://prestodb.io/) - Distributed SQL engine for large-scale data analytics.
 - [Dremio](https://www.dremio.com/) - Data lake query engine and lakehouse platform.
 
 ## ML Feature Stores
+> Specialized databases for storing and serving ML features for training and inference.
+
 - [Feast](https://feast.dev/) - Open-source feature store.
 - [Tecton](https://www.tecton.ai/) - Enterprise-grade feature platform.
 - [Hopsworks](https://www.hopsworks.ai/) - Feature store with online/offline support.
-
 
 ## Resources
 - [Awesome Database Learning](https://github.com/pingcap/awesome-database-learning) - Curated list for database learning resources.
@@ -282,10 +321,8 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Awesome Big Data](https://github.com/0xnr/awesome-bigdata) - Curated list of big data frameworks.
 - [CMU Database Group Lectures](https://www.youtube.com/c/cmudatabasegroup) - Deep dive into database systems.
 
-
 ## Contribute
-Contributions are welcome! Please read the [contribution guidelines](contributing.md) first.
-
+Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
 ## License
 [![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
