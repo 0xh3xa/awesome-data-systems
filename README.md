@@ -1,5 +1,9 @@
 # Awesome Data Systems
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+<p>
+  <img src="https://awesome.re/badge.svg" alt="Awesome List Badge"/>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"/>
+  <img src="https://img.shields.io/badge/Tools-Collection-blue" alt="Tools Collection"/>
+</p>
 
 A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakehouses, pipelines, ETL, message queues, and analytics tools.
 
@@ -322,7 +326,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [CMU Database Group Lectures](https://www.youtube.com/c/cmudatabasegroup) - Deep dive into database systems.
 
 ## Contribute
-Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 [![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
