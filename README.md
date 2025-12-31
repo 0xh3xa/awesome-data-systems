@@ -1,5 +1,9 @@
 # Awesome Data Systems
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+<p>
+  <img src="https://awesome.re/badge.svg" alt="Awesome List Badge"/>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"/>
+  <img src="https://img.shields.io/badge/Tools-Collection-blue" alt="Tools Collection"/>
+</p>
 
 A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakehouses, pipelines, ETL, message queues, and analytics tools.
 
@@ -12,7 +16,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Analytical Columnar Databases (SQL)](#analytical-columnar-databases-sql)
 - [Time-Series Databases (Mixed)](#time-series-databases-mixed)
 - [Vector Databases (NoSQL)](#vector-databases-nosql)
-- [Search Engines / Specialized (NoSQL)](#search-engines--specialized-nosql)
+- [Search Engines](#search-engines)
 - [Streaming Databases (SQL)](#streaming-databases-sql)
 - [Data Warehouses & Lakehouses (SQL)](#data-warehouses--lakehouses-sql)
 - [Cloud Databases (Managed Services · Mixed)](#cloud-databases-managed-services--mixed)
@@ -111,7 +115,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Pinecone](https://www.pinecone.io/) - Managed vector database for similarity search.
 - [Vespa](https://vespa.ai/) - Big data serving engine with vector and keyword search.
 
-## Search Engines / Specialized (NoSQL)
+## Search Engines
 > Engines optimized for full-text search, relevance scoring, and specialized query types.
 
 - [Elasticsearch](https://www.elastic.co/elasticsearch/) - Distributed search and analytics engine.
@@ -322,7 +326,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [CMU Database Group Lectures](https://www.youtube.com/c/cmudatabasegroup) - Deep dive into database systems.
 
 ## Contribute
-Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 [![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
