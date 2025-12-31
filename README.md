@@ -16,7 +16,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Analytical Columnar Databases (SQL)](#analytical-columnar-databases-sql)
 - [Time-Series Databases (Mixed)](#time-series-databases-mixed)
 - [Vector Databases (NoSQL)](#vector-databases-nosql)
-- [Search Engines / Specialized (NoSQL)](#search-engines--specialized-nosql)
+- [Search Engines](#search-engines)
 - [Streaming Databases (SQL)](#streaming-databases-sql)
 - [Data Warehouses & Lakehouses (SQL)](#data-warehouses--lakehouses-sql)
 - [Cloud Databases (Managed Services · Mixed)](#cloud-databases-managed-services--mixed)
@@ -115,7 +115,7 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [Pinecone](https://www.pinecone.io/) - Managed vector database for similarity search.
 - [Vespa](https://vespa.ai/) - Big data serving engine with vector and keyword search.
 
-## Search Engines / Specialized (NoSQL)
+## Search Engines
 > Engines optimized for full-text search, relevance scoring, and specialized query types.
 
 - [Elasticsearch](https://www.elastic.co/elasticsearch/) - Distributed search and analytics engine.
