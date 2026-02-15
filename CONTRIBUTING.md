@@ -38,8 +38,3 @@ If you propose a new category:
 - Make sure it has at least **2–3 entries** to start with.
 - Add it to the **Table of Contents**.
 - Provide a short category description for consistency.
-
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
