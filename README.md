@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Tools-Collection-blue" alt="Tools Collection"/>
 </p>
 
-A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakehouses, pipelines, ETL, message queues, and analytics tools.
+A guide to the data ecosystem including: SQL/NoSQL databases, warehouses, lakehouses, pipelines, ETL, message queues, and analytics tools.
 
 ## Table of Contents
 - [Relational Databases (SQL)](#relational-databases-sql)
@@ -326,4 +326,6 @@ A curated guide to the data ecosystem — SQL/NoSQL databases, warehouses, lakeh
 - [CMU Database Group Lectures](https://www.youtube.com/c/cmudatabasegroup) - Deep dive into database systems.
 
 ## Contribute
-Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome! 🤝
+
+Please read the [CONTRIBUTING.md](CONTRIBUTING.md).
