@@ -209,6 +209,7 @@ A guide to the data ecosystem including: SQL/NoSQL databases, warehouses, lakeho
 - [Amundsen](https://www.amundsen.io/) - Open-source data discovery and metadata engine by Lyft.
 - [DataHub](https://datahubproject.io/) - Modern data catalog and metadata platform.
 - [OpenMetadata](https://open-metadata.org/) - Centralized metadata management platform.
+- [OneQuery](https://github.com/wordbricks/onequery) - Self-hosted gateway for safe, auditable queries for agents across approved data sources.
 - [Apache Atlas](https://atlas.apache.org/) - Governance and metadata framework for Hadoop ecosystems.
 
 ### Data Quality & Observability
