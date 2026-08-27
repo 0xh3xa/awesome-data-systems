@@ -66,6 +66,7 @@ A guide to the data ecosystem including: SQL/NoSQL databases, warehouses, lakeho
 
 - [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) - Fully managed key-value and document database by AWS.
 - [etcd](https://etcd.io/) - Distributed key-value store for configuration and service discovery.
+- [Leaves](https://github.com/kochelmonster/leaves) - High-performance, header-only C++20 embedded key-value database with ACID transactions, copy-on-write snapshots, lock-free readers, multi-writer support, and deterministic replication.
 - [Redis](https://redis.io/) - In-memory data structure store, used as a database, cache, and message broker.
 - [Riak KV](https://riak.com/products/riak-kv/) - Distributed key-value store.
 - [Valkey](https://valkey.io/) - Open-source Redis fork, maintained by the Linux Foundation.
