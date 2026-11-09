@@ -196,6 +196,7 @@ A guide to the data ecosystem including: SQL/NoSQL databases, warehouses, lakeho
 ### Data Visualization & BI
 - [Grafana](https://grafana.com/) - Open-source analytics and monitoring platform.
 - [Metabase](https://www.metabase.com/) - Open-source business intelligence & analytics.
+- [NextJSON](https://nextjson.com/) - Free online nested JSON parser, formatter and toolbox.
 - [Redash](https://redash.io/) - Query your data sources and build dashboards.
 - [Superset](https://superset.apache.org/) - Apache Superset, data exploration & visualization.
 
